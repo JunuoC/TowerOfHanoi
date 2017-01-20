@@ -92,12 +92,9 @@ void tower::on_actionNew_triggered()
 
 void tower::on_actionSet_Disks_triggered()
 {
-    ui->spinBox->show();
-}
-
-void tower::on_actionExit_triggered()
-{
-    close();
+    //ui->spinBox->show();
+    ui->spinBox->setEnabled(true);
+    ui->spinBox->setVisible(true);
 }
 
 void tower::on_actionUndo_triggered()
@@ -142,6 +139,7 @@ void tower::on_spinBox_valueChanged(int arg1)
 
 void tower::delayedAction()
 {
+    Move autom;
     if(autoplay){
         if(!schedule.empty()){
             Move autom = schedule.dequeue();
@@ -184,4 +182,9 @@ void tower::on_pushButton_clicked(Pole *p)
             moving = NULL;
         }
     }
+}
+
+void tower::on_actionClose_triggered()
+{
+    close();
 }

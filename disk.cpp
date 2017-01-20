@@ -29,11 +29,11 @@ void Disk::paintEvent(QPaintEvent *){
     p.setPen(diskEdgeColor);
     p.save();
 
-    p.drawEllipse(QPoint(60,top - pos * diskHeight), (15 + size * 6), (15 + size * 6)/2);
+    p.drawEllipse(QPoint(60,top - pos * diskHeight), (15 + size * 6), (15 + size * 6)/3);
     p.setPen(Qt::NoPen);
     p.drawRect(60-(15 + size * 6),top - pos * diskHeight-diskHeight, 2*(15 + size * 6), diskHeight);
     p.setPen(diskEdgeColor);
-    p.drawEllipse(QPoint(60,top - pos * diskHeight-diskHeight), (15 + size * 6), (15 + size * 6)/2);
+    p.drawEllipse(QPoint(60,top - pos * diskHeight-diskHeight), (15 + size * 6), (15 + size * 6)/3);
     p.drawLine(60+(15 + size * 6),top - pos * diskHeight, 60+(15 + size * 6), top - pos * diskHeight-diskHeight);
     p.drawLine(60-(15 + size * 6),top - pos * diskHeight, 60-(15 + size * 6), top - pos * diskHeight-diskHeight);
     p.setBrush(diskEdgeColor);

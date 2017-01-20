@@ -36,8 +36,6 @@ private slots:
 
     void on_actionSet_Disks_triggered();
 
-    void on_actionExit_triggered();
-
     void on_actionUndo_triggered();
 
     void on_actionUndo_All_triggered();
@@ -47,6 +45,8 @@ private slots:
     void on_spinBox_valueChanged(int arg1);
 
     void delayedAction();
+
+    void on_actionClose_triggered();
 
 private:
     Ui::tower *ui;
